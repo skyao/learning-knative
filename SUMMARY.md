@@ -14,5 +14,9 @@
 * [Eventing组件](eventing/index.md)
     * [CloudEvents](eventing/cloudevents/index.md)
       * [CloudEvents规范](eventing/cloudevents/cloudevents-spec.md)
-* [riff](riff/index.md)
-
+* [技术](technical/index.md)
+	* [EDA](technical/eda/index.md)
+* [项目](projects/index.md)
+    * [riff](projects/riff/index.md)
+        * [安装riff](projects/riff/install.md)
+    * [Pivotal Function Service](projects/pfs/index.md)

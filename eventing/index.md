@@ -1,5 +1,7 @@
 # eventing
 
+## 介绍
+
 备注：内容来自 https://github.com/knative/docs/tree/master/eventing
 
 eventing是Knative事件绑定和发送的开源规范和实现。
@@ -54,3 +56,9 @@ Source提供了类似的抽象层，用于从外部Kubernetes提供数据源并�
 最后，我们有一个名为Flow的更高级抽象，它将从Source到端点的规范捆绑起来，选择性的允许您选择事件路由的Channel和Bus。（当然，有一个默认的Bus用于配置Channel。）
 
 - **Flow**是Eventing中面向用户的顶级概念; 它描述了从外部事件Source到将对事件做出反应的目标的所需路径。只有一种类型的Flow，由核心 Knative Eventing install 安装。
+
+## 总结
+
+Eventing的核心功能：对发布/订阅细节进行抽象处理，帮助开发人员摆脱相关负担。
+
+函数的存在是为了响应事件。FaaS项目与托管服务之间的实现差异，集中体现在获取并使用这些事件的具体方式身上。Knative Eventing组件旨在对这些事件进行抽象处理，从而帮助开发人员摆脱与后端相关的具体细节。如此一来，开发人员将不必费心于挑选消息传递平台以及数据复制方法等工作。

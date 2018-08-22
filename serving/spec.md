@@ -32,8 +32,6 @@ prod.my-service.default.mydomain.com
 
 ## 资源 YAML 定义
 
-YAMLs for the Knative Serving API resources are described below, describing the basic k8s structure: metadata, spec and status, along with comments on specific fields.
-
 下面描述了Knative Serving API资源的YAML，描述了基本的k8s结构：metadata，spec和status，以及对特定字段的注释。
 
 ### Route
