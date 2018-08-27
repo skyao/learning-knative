@@ -18,6 +18,7 @@
   * [Serverless](technical/serverless/index.md)
     * [CNCF白皮书](technical/serverless/cncf-whitepaper.md)
   * [EDA](technical/eda/index.md)
+    * [Gartner Report 2017](technical/eda/article_gartner.md)
 * [项目](projects/index.md)
     * [riff](projects/riff/index.md)
         * [安装riff](projects/riff/install.md)
