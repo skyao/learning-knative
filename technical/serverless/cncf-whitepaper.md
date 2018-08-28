@@ -418,5 +418,11 @@ Serverless框架提供的适配器使得使用流行的Web应用程序框架（�
 
 我们可以将FaaS解决方案概括为具有下图中显示的几个关键元素：
 
+![](images/image_0.png)
 
+- **Event sources/事件源** - 触发事件或流式传输到一个或多个function实例中
+- **Function instances/函数实例** - 单个function/微服务，可以按需扩展
+- **FaaS Controller/FaaS控制器** - 部署，控制和监视function实例及其来源
+- **Platform services/平台服务** - FaaS解决方案使用的一般集群或云服务（有时称为Backend-as-a-Service） 
 
+让我们首先看一下serverless环境中函数的生命周期。
