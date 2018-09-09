@@ -282,7 +282,7 @@ Platform-as-a-Service实现使团队能够部署和扩展应用程序，通过�
 
 示例：AWS Lambda，Azure Functions，基于Apache OpenWhisk的IBM Cloud Functions，Google Cloud Functions，华为Function Stage 和 Function Graph，Kubeless，iron.io，funktion，fission，nuclio
 
-Serverless使开发人员能够专注于由事件驱动的function组成的应用程序，这些function响应各种触发器并让平台负责其余的事情 - 例如触发器到function逻辑，从一个function传递到另一个function的信息，自动设置容器和运行时间（时间，地点和内容），自动扩展，身份管理等。
+Serverless使开发人员能够专注于由事件驱动的函数组成的应用程序，这些函数响应各种触发器并让平台负责其余的事情 - 例如触发器到函数逻辑，从一个函数传递到另一个函数的信息，自动设置容器和运行时间（时间，地点和内容），自动扩展，身份管理等。
 
 其优势包括对任何云原生范例的基础设施管理的最低要求。无需考虑操作系统或文件系统，运行时甚至容器管理。Serverless享受自动扩展，弹性负载平衡和最细粒度的“即用即付”计算模型。
 
@@ -290,29 +290,29 @@ Serverless使开发人员能够专注于由事件驱动的function组成的应�
 
 #### 目标受众
 
-- 希望在单个function中更多地关注业务逻辑的开发人员，这些function可根据需求自动扩展并将交易与成本紧密联系起来。
+- 希望在单个函数中更多地关注业务逻辑的开发人员，这些函数可根据需求自动扩展并将交易与成本紧密联系起来。
 - 希望更快地构建应用程序并且更少关注运维方面的开发人员。
 - 创建事件驱动应用程序的开发人员和团队，例如响应数据库更改，物联网读数，人工输入等。
 - 在标准和最佳实践尚未完全建立的领域，能够轻松采用尖端技术的组织。
 
 #### 开发/运维人员经验
 
-- 迭代function，在本地Web开发环境中构建和测试。
-- 将单个function上载到serverless平台。
-- 声明事件触发器，function及其运行时，以及事件到function的关系。
+- 迭代函数，在本地Web开发环境中构建和测试。
+- 将单个函数上载到serverless平台。
+- 声明事件触发器，函数及其运行时，以及事件到函数的关系。
 - 测试并观察生产中的应用。
 - 无需更新配置以确保高可用性和扩展以匹配需求。
 
 #### Benefits优点
 
-- 开发人员的观点已经远离运维问题，如管理高可用性function的部署，更多地转向function逻辑本身。
+- 开发人员的观点已经远离运维问题，如管理高可用性函数的部署，更多地转向函数逻辑本身。
 - 开发人员可根据需求/工作量自动扩展。
 - 利用新的“即用即付”成本模型，仅对代码实际运行的时间收费。
 - 操作系统，运行时甚至容器生命周期都是完全抽象的（serverless）。
 - 更适合涉及物联网，数据和消息的新兴事件驱动和不可预测的工作负载。
-- 通常是无状态，不可变和短暂的部署。每个function都以指定的角色和明确定义/有限的资源访问权限运行。
+- 通常是无状态，不可变和短暂的部署。每个函数都以指定的角色和明确定义/有限的资源访问权限运行。
 - 中间件层将得到调整/优化，将随着时间的推移提高应用程序性能。
-- 强烈推广微服务模型，因为大多数serverless运行时强制限制每个单独function的大小或执行时间。
+- 强烈推广微服务模型，因为大多数serverless运行时强制限制每个单独函数的大小或执行时间。
 - 易于将第三方API集成为定制的serverless API，既可以扩展使用，又可以灵活地从客户端或服务器调用。
 
 #### 缺点
@@ -321,9 +321,9 @@ Serverless使开发人员能够专注于由事件驱动的function组成的应�
 
 - 由于运行时更具动态性，与IaaS和PaaS相比，调试可能更具挑战性。
 
-- 由于按需结构，如果运行时在空闲时删除function的所有实例，则某些serverless运行时的“冷启动”方面可能有性能问题。
+- 由于按需结构，如果运行时在空闲时删除函数的所有实例，则某些serverless运行时的“冷启动”方面可能有性能问题。
 
-- 在更复杂的情况下（例如，触发其他function的function），对于相同数量的逻辑，可以存在更多的运维表面区域。
+- 在更复杂的情况下（例如，触发其他函数的函数），对于相同数量的逻辑，可以存在更多的运维表面区域。
 
 - 缺乏标准化和生态系统成熟度。
 
@@ -371,7 +371,7 @@ Serverless使开发人员能够专注于由事件驱动的function组成的应�
 
 性能：
 
-- 每个实例或每个HTTP客户端每秒有多少个function调用？
+- 每个实例或每个HTTP客户端每秒有多少个函数调用？
 - 给定工作负载需要多少台服务器或实例？
 
 - 从调用到响应的延迟是多少（在冷启动和热启动中）？
@@ -384,7 +384,7 @@ CNCF Serverless工作组的潜在成果之一可能是何时选择特定模型�
 
 这包括开发成本和运行时资源成本。
 
-- 不是每个人都可以从头开始开展他们的开发活动。 因此，需要仔细考虑将现有应用程序迁移到其中一个云原生模型的成本。虽然对容器的升降式模型看起来最便宜，但从长远来看，它可能不是最具成本效益的。 同样，从成本角度来看，serverless的按需模型非常具有吸引力，但将单体应用程序拆分为function所需的开发工作可能令人生畏。
+- 不是每个人都可以从头开始开展他们的开发活动。 因此，需要仔细考虑将现有应用程序迁移到其中一个云原生模型的成本。虽然对容器的升降式模型看起来最便宜，但从长远来看，它可能不是最具成本效益的。 同样，从成本角度来看，serverless的按需模型非常具有吸引力，但将单体应用程序拆分为函数所需的开发工作可能令人生畏。
 - 与依赖服务集成的成本是多少？ Serverless计算最初可能看起来最经济，但它可能需要更昂贵的第三方服务成本，或者非常快速地自动缩放，这可能导致更高的使用费。
 - 平台免费提供哪些功能/服务？ 我是否愿意以可移植性的潜在成本购买供应商的生态系统？
 
@@ -396,7 +396,7 @@ CNCF Serverless工作组的潜在成果之一可能是何时选择特定模型�
 
 ### 跨部署目标拆分组件
 
-考虑将正确的技术与正确的工作相匹配，例如，物联网演示可能同时使用PaaS应用程序处理对连接设备仪表板的请求，以及一组 serverless function 来处理来自设备本身的MQTT消息事件。 Serverless不是一个银弹，而是在您的云原生架构中可以考虑的新选择。
+考虑将正确的技术与正确的工作相匹配，例如，物联网演示可能同时使用PaaS应用程序处理对连接设备仪表板的请求，以及一组 serverless 函数来处理来自设备本身的MQTT消息事件。 Serverless不是一个银弹，而是在您的云原生架构中可以考虑的新选择。
 
 ### 设计多个部署目标
 
@@ -414,9 +414,72 @@ Serverless框架提供的适配器使得使用流行的Web应用程序框架（�
 
 # 详细信息视图：Serverless处理模型
 
-本节总结了serverless框架中当前的function使用，并概括了serverless function需求，生命周期，调用类型和所需的抽象。 我们的目标是定义serverless function规范，以便相同的function可以编码一次并在不同的serverless框架中使用。 本节未定义确切的function配置和API。
+本节总结了serverless框架中当前的函数使用，并概括了serverless 函数需求，生命周期，调用类型和所需的抽象。 我们的目标是定义serverless 函数规范，以便相同的函数可以编码一次并在不同的serverless框架中使用。 本节未定义确切的函数配置和API。
 
 我们可以将FaaS解决方案概括为具有下图中显示的几个关键元素：
+
+![](images/faas-elements.png)
+
+- **Event sources/事件源** - 触发事件或流式传输触发到一个或多个函数实例中
+- **Function instances/函数实例** - 单个函数/微服务，可以按需扩展
+- **FaaS Controller/FaaS控制器**- 部署，控制和监视函数实例及其来源
+- **Platform services/平台服务** - FaaS解决方案使用的一般集群或云服务（有时称为Backend-as-a-Service）
+
+让我们首先看一下serverless环境中函数的生命周期。
+
+## 函数生命周期
+
+以下部分描述了函数生命周期的各个方面以及serverless框架/运行时通常如何管理它们。
+
+### 函数部署管道
+
+![](images/function_deployment_pipeline.png)
+
+函数的生命周期从编写代码并提供规范和元数据开始（参见下面的函数定义），“builder”实体将获取代码和规范，编译并将其转换为工件（代码二进制文件，包或容器镜像）。 然后将工件部署在具有控制器实体的集群上，该控制器实体负责基于事件流量和/或实例上的负载来扩展函数实例的数量。
+
+### 函数操作
+
+Serverless框架可以允许以下动作和方法来定义和控制函数生命周期：
+
+- Create - 创建新函数，包括其规格和代码
+- Publish - 创建可在群集上部署的函数新版本
+- Update Alias/Label (版本的) - 更新别名/标签（版本） - 更新版本别名
+- Execute/Invoke - 调用特定版本，不通过其事件源
+- Event Source association - 将特定版本的函数与事件源连接
+- Get - 返回函数元数据和规范
+- Update - 修改函数的最新版本
+- Delete - 删除函数，可以删除特定版本或其所有版本的函数
+- List - 显示函数列表及其元数据
+- Get Stats - 返回有关函数运行时使用情况的统计信息
+- Get Logs - 返回函数生成的日志
+
+![](images/function_operations.png)
+
+在创建函数时，提供其元数据（稍后在函数规范中描述）作为函数创建的一部分，函数将被编译并可能被发布。 稍后可以启动，禁用和启用函数。函数部署需要能够支持以下用例：
+
+- Event streaming/事件流，在此用例中，队列中可能始终存在事件，而处理的暂停/恢复可能需要通过显式请求
+
+- Warm startup/热启动 - 在任何时候具有最少实例数量的函数，在接收的“first”事件时进行热启动，因为该函数已经部署并准备好为事件服务（而不是冷启动，冷启动时指函数获得通过“incoming”事件在第一次调用时部署）
+
+用户可以**发布**函数，这将创建新版本（“latest”版本的副本），发布的版本可能被标记或具有别名，请参阅下文。
+
+用户可能希望直接**执行/调用**函数（绕过事件源或API gateway）以进行调试和开发过程。用户可以指定调用参数，例如所需版本，同步/异步操作，详细级别等。
+
+用户可能想要获得函数**统计**（例如调用次数，平均运行时间，平均延迟，失败，重试等），统计可以是当前度量值或时间序列值（例如存储在Prometheus或云提供者设施中例如AWS Cloud Watch）。
+
+用户可能希望检索函数**日志**数据。这可以通过严重性级别和/或时间范围和/或内容来进行过滤。 Log数据是每个函数都有的，它包括诸如函数创建和删除，显式错误，警告或调试消息之类的事件，以及可选的函数Stdout或Stderr。倾向每次调用有一个日志条目或者将日志条目与特定调用相关联的方式（以允许更简单地跟踪函数执行流程）。
+
+### Function Versioning and Aliases
+
+A Function may have multiple versions, providing the user the ability to run different level of codes such as beta/production, A/B testing etc. When using versioning, the function version is "latest" by default, the “latest” version can be updated and modified, potentially triggering a new build process on every such change.
+
+Once a user wants to freeze a version he will use a **Publish** operation that will create a new version with potential tags or aliases (e.g. "beta", “production”) to be used when configuring an event source, so an event or API call can be routed to a specific function version. Non-latest function versions are immutable (their code and all or some of the function spec) and cannot be changed once published; functions cannot be “un-published” instead they should be deleted.
+
+Note that most implementations today do not allow function branching/fork (updating an old version code) since it complicates the implementation and usage, but this may be desired in the future.
+
+When there are multiple versions of the same function, the user must specify the version of the function he would like to operate and how to divide the traffic of events between the different versions (e.g. a user can decide to route 90% of an event traffic to a stable version and 10% to a beta version a.k.a "canary update"). This can be either by specifying the exact version or by specifying the version alias. A version alias will typically reference to a specific function version.
+
+When a user creates or updates a function, it may drive a new build and deployment depending on the nature of the change.
 
 
 
