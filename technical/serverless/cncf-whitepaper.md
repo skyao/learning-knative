@@ -140,7 +140,6 @@ Serverless产品或平台为开发人员带来以下好处：
 
 - 另请参阅下面的HTTP REST API和Web应用程序。
 
-
 ### 批处理作业或计划任务
 
 每天只需几分钟就能以异步方式进行强大的并行计算，IO或网络访问的作业非常适合serverless。作业可以在以弹性方式运行时有效地消费他们所需的资源，并且在不被使用的当天剩余时间内不会产生资源成本。
@@ -356,26 +355,20 @@ Serverless使开发人员能够专注于由事件驱动的函数组成的应用�
 弹性：
 
 - 如何使我的应用程序适应数据中心故障？
-
 - 在部署更新时如何确保服务的连续性？
-
 - 如果我的服务失败怎么办？ 平台会自动恢复吗？ 它对最终用户是不可见的吗？
 
 可扩展性：
 
 - 如果有突然的变化，平台是否支持自动扩展？
-
 - 我的应用程序是否设计为有效地利用无状态扩展？
-
 - 我的serverless平台是否会压倒任何其他组件，例如数据库？ 我可以管理或限制背压吗？
 
 性能：
 
 - 每个实例或每个HTTP客户端每秒有多少个函数调用？
 - 给定工作负载需要多少台服务器或实例？
-
 - 从调用到响应的延迟是多少（在冷启动和热启动中）？
-
 - 微服务之间的延迟，与单个部署中的共存功能相比，是问题吗？
 
 CNCF Serverless工作组的潜在成果之一可能是何时选择特定模型的决策框架，以及如何在给定一组推荐工具的情况下进行测试。 有关详细信息，请参阅结论部分。
@@ -480,6 +473,4 @@ Note that most implementations today do not allow function branching/fork (updat
 When there are multiple versions of the same function, the user must specify the version of the function he would like to operate and how to divide the traffic of events between the different versions (e.g. a user can decide to route 90% of an event traffic to a stable version and 10% to a beta version a.k.a "canary update"). This can be either by specifying the exact version or by specifying the version alias. A version alias will typically reference to a specific function version.
 
 When a user creates or updates a function, it may drive a new build and deployment depending on the nature of the change.
-
-
 
