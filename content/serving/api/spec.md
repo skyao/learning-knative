@@ -1,10 +1,10 @@
 ---
 date: 2018-10-24T14:30:00+08:00
 title: Serving API 规范
-weight: 320
+weight: 322
 menu:
   main:
-    parent: "serving"
+    parent: "serving-api"
 description : "Knative Serving API 规范"
 ---
 

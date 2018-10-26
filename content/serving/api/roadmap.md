@@ -1,10 +1,10 @@
 ---
 date: 2018-10-24T14:40:00+08:00
 title: 2018 API Core 路线图
-weight: 360
+weight: 321
 menu:
   main:
-    parent: "serving-apicore"
+    parent: "serving-api"
 description : "2018 API Core 路线图"
 ---
 

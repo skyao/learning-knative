@@ -77,11 +77,18 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 300
 
 [[menu.main]]
-	name   = "Serving API Core"
-	identifier = "serving-apicore"
+	name   = "Serving API"
+	identifier = "serving-api"
 	parent = "serving"
-	url    = "/serving/apicore/"
-	weight = 350
+	url    = "/serving/api/"
+	weight = 320
+
+[[menu.main]]
+	name   = "Serving Scaling"
+	identifier = "serving-scaling"
+	parent = "serving"
+	url    = "/serving/scaling/"
+	weight = 330
 
 [[menu.main]]
 	name   = "Eventing模块"

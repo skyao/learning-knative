@@ -1,10 +1,10 @@
 ---
 date: 2018-10-24T14:25:00+08:00
 title: 资源类型
-weight: 310
+weight: 323
 menu:
   main:
-    parent: "serving"
+    parent: "serving-api"
 description : "资源类型"
 ---
 
