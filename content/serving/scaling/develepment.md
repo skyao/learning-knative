@@ -112,6 +112,8 @@ Autoscaler实现了两种操作模式的缩放算法：Stable/稳定模式和Pan
 
 The Autoscaler evaluates its metrics every 2 seconds.  In addition to the 60-second window, it also keeps a 6-second window (the panic window).  If the 6-second average concurrency reaches 2 times the desired average, then the Autoscaler transitions into Panic Mode.  In Panic Mode the Autoscaler bases all its decisions on the 6-second window, which makes it much more responsive to sudden increases in traffic.  Every 2 seconds it adjusts the size of the Deployment to achieve the stable, desired average (or a maximum of 10 times the current observed Pod count, whichever is smaller).  To prevent rapid fluctuations in the Pod count, the Autoscaler will only increase Deployment size during Panic Mode, never decrease.  60 seconds after the last Panic Mode increase to the Deployment size, the Autoscaler transistions back to Stable Mode and begins evaluating the 60-second windows again.
 
+Autoscaler每2秒评估一次其指标。除了60秒的窗口，它还保持一个6秒的窗口（恐慌窗口）。如果6秒平均并发性达到所需平均值的2倍，则Autoscaler将转换为恐慌模式。在恐慌模式下，Autoscaler将其所有决策都基于6秒窗口，这使得它对流量的突然增加更加敏感。每隔2秒，它会调整部署的大小，以达到稳定的所需平均值（或最大值为当前观察到的Pod数量的10倍，以较小者为准）。为了防止Pod计数的快速波动，Autoscaler只会在恐慌模式下增加部署大小，永不减少。在最后一次Panic Mode增加到部署大小后60秒，Autoscaler转换回稳定模式并再次开始评估60秒窗口。
+
 #### Deactivation
 
 When the Autoscaler has observed an average concurrency per pod of 0.0 for some time ([#305](https://github.com/knative/serving/issues/305)), it will transistion the Revision into the Reserve state.  This scales the Deployment to 0, stops any single tenant Autoscaler associated with the Revision, and routes all traffic for the Revision to the Activator.
