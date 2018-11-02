@@ -96,6 +96,48 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	url    = "/eventing/"
 	weight = 400
 
+[[menu.main]]
+	name   = "Eventing Bus"
+	identifier = "eventing-bus"
+	parent = "eventing"
+	url    = "/eventing/bus/"
+	weight = 410
+
+[[menu.main]]
+	name   = "Eventing Channel"
+	identifier = "eventing-channel"
+	parent = "eventing"
+	url    = "/eventing/channel/"
+	weight = 430
+	
+[[menu.main]]
+	name   = "Eventing subscription"
+	identifier = "eventing-subscription"
+	parent = "eventing"
+	url    = "/eventing/subscription/"
+	weight = 440
+
+[[menu.main]]
+	name   = "Eventing Source"
+	identifier = "eventing-source"
+	parent = "eventing"
+	url    = "/eventing/source/"
+	weight = 450
+
+[[menu.main]]
+	name   = "Eventing Flow"
+	identifier = "eventing-flow"
+	parent = "eventing"
+	url    = "/eventing/flow/"
+	weight = 460
+
+[[menu.main]]
+	name   = "Eventing API"
+	identifier = "eventing-api"
+	parent = "eventing"
+	url    = "/eventing/api/"
+	weight = 470
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
