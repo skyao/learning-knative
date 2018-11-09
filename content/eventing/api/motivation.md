@@ -1,12 +1,14 @@
 ---
 date: 2018-10-24T14:20:00+08:00
-title: Event API的动机
+title: 动机和目标
 weight: 471
 menu:
   main:
     parent: "eventing-api"
-description : "Event API的动机"
+description : "Event API的动机和目标"
 ---
+
+> 备注：内容来自 https://github.com/knative/eventing/blob/master/docs/spec/motivation.md
 
 Knative Eventing的目标是定义通用的可组合原语，以启用后绑定的事件源和事件消费者。
 
