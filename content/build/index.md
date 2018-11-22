@@ -1,7 +1,6 @@
 ---
 date: 2018-10-24T14:25:00+08:00
 title: Build模块
-weight: 200
 keywords:
 - Build模块
 description : "介绍Knative的Build模块"

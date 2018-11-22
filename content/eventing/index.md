@@ -1,7 +1,6 @@
 ---
 date: 2018-10-24T14:45:00+08:00
 title: Eventing模块
-weight: 400
 description : "介绍Knative的Eventing模块"
 ---
 
