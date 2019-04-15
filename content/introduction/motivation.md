@@ -5,10 +5,16 @@ weight: 101
 menu:
   main:
     parent: "introduction"
-keywords:
-- knative动机
 description : "knative项目的动机"
 ---
+
+knative 在首页描述如下：
+
+> 让您的开发人员更高效
+>
+> Knative组件构建于Kubernetes之上，抽象出复杂的细节，使开发人员能够专注于重要的事情。 通过编写来自现实世界成功实现的最佳实践，Knative解决了构建、部署和管理云原生服务的“无聊但困难”的部分，从而得以解脱。
+
+### Serving
 
 > 备注：内容来自 https://github.com/knative/serving/blob/master/docs/spec/motivation.md
 

@@ -77,6 +77,13 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 300
 
 [[menu.main]]
+	name   = "Serving概述"
+	identifier = "serving-overview"
+	parent = "serving"
+	url    = "/serving/overview/"
+	weight = 310
+
+[[menu.main]]
 	name   = "Serving API"
 	identifier = "serving-api"
 	parent = "serving"

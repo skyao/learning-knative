@@ -1,10 +1,10 @@
 ---
 date: 2018-11-13T10:35:00+08:00
 title: Serving版本发布
-weight: 301
+weight: 319
 menu:
   main:
-    parent: "serving"
+    parent: "serving-overview"
 description : "Serving版本发布"
 ---
 

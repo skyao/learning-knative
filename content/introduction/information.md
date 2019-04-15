@@ -17,13 +17,14 @@ description : "收集knative的各种资料"
 
 ### 官方网站
 
+- [knative官网](https://www.knative.dev/)
 - [knative @ google cloud](https://cloud.google.com/knative/)
-- [Knative @ github ](https://github.com/knative/build)
-- [Go Blog](https://blog.golang.org/)
+- [Knative @ github ](https://github.com/knative)
+- [knative社区](https://www.knative.dev/community/)
 
 ### 文档
 
-- https://github.com/knative/docs/
+- https://www.knative.dev/docs/
 
 ## 社区资料
 
