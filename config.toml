@@ -98,6 +98,13 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 330
 
 [[menu.main]]
+	name   = "Runtime Contract"
+	identifier = "runtime-contract"
+	parent = "serving"
+	url    = "/serving/runtime-contract/"
+	weight = 350
+
+[[menu.main]]
 	name   = "Eventing模块"
 	identifier = "eventing"
 	url    = "/eventing/"
