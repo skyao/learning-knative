@@ -111,46 +111,25 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 400
 
 [[menu.main]]
-	name   = "Eventing Bus"
-	identifier = "eventing-bus"
-	parent = "eventing"
-	url    = "/eventing/bus/"
-	weight = 410
-
-[[menu.main]]
-	name   = "Eventing Channel"
-	identifier = "eventing-channel"
-	parent = "eventing"
-	url    = "/eventing/channel/"
-	weight = 430
-	
-[[menu.main]]
-	name   = "Eventing subscription"
-	identifier = "eventing-subscription"
-	parent = "eventing"
-	url    = "/eventing/subscription/"
-	weight = 440
-
-[[menu.main]]
-	name   = "Eventing Source"
+	name   = "Event Source"
 	identifier = "eventing-source"
 	parent = "eventing"
 	url    = "/eventing/source/"
-	weight = 450
+	weight = 410
 
 [[menu.main]]
-	name   = "Eventing Flow"
-	identifier = "eventing-flow"
+	name   = "Event Registry"
+	identifier = "eventing-registry"
 	parent = "eventing"
-	url    = "/eventing/flow/"
-	weight = 460
+	url    = "/eventing/registry/"
+	weight = 430
 
 [[menu.main]]
-	name   = "Eventing API"
-	identifier = "eventing-api"
+	name   = "Broker和Trigger"
+	identifier = "eventing-broker"
 	parent = "eventing"
-	url    = "/eventing/api/"
-	weight = 470
+	url    = "/eventing/broker/"
+	weight = 440
 
 [blackfriday]
 	smartypants	= true

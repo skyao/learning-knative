@@ -2,6 +2,7 @@
 date: 2018-11-02T15:29:00+08:00
 title: Eventing Source
 description : "介绍 Knative 中的 Eventing Source"
+weight: 410
 ---
 
 Eventing Source
@@ -16,13 +17,13 @@ https://knative.dev/docs/eventing/sources/
 
 ## Sources
 
-这些都是作为CRD安装的来源。
+这些都是作为CRD安装的source。
 
 | Name                                                         | Status           | Support | Description                                                  |
 | ------------------------------------------------------------ | ---------------- | ------- | ------------------------------------------------------------ |
 | [AWS SQS](https://github.com/knative/eventing-contrib/blob/master/awssqs/pkg/apis/sources/v1alpha1/aws_sqs_types.go) | 概念验证         | None    | Brings [AWS Simple Queue Service](https://aws.amazon.com/sqs/) messages into Knative. |
 | [Apache Camel](https://github.com/knative/eventing-contrib/blob/master/camel/source/pkg/apis/sources/v1alpha1/camelsource_types.go) | 概念验证         | None    | Allows to use [Apache Camel](https://github.com/apache/camel) components for pushing events into Knative. |
-| [Apache CouchDB](https://github.com/knative/eventing-contrib/tree/{{< branch >}}/couchdb) | 积极开发中       | None    | Brings [Apache CouchDB](https://couchdb.apache.org/) messages into Knative. |
+| [Apache CouchDB](https://github.com/knative/eventing-contrib/) | 积极开发中       | None    | Brings [Apache CouchDB](https://couchdb.apache.org/) messages into Knative. |
 | [Apache Kafka](https://github.com/knative/eventing-contrib/blob/master/kafka/source/pkg/apis/sources/v1alpha1/kafka_types.go) | 概念验证         | None    | Brings [Apache Kafka](https://kafka.apache.org/) messages into Knative. |
 | [BitBucket](https://github.com/nachocano/bitbucket-source)   | 概念验证         | None    | Registers for events of the specified types on the specified BitBucket organization/repository. Brings those events into Knative. |
 | [CloudAuditLogsSource](https://github.com/google/knative-gcp/blob/master/docs/examples/cloudauditlogssource/README.md) | 积极开发中       | None    | Registers for events of the specified types on the specified [Google Cloud Audit Logs](https://cloud.google.com/logging/docs/audit/). Brings those events into Knative. |
@@ -34,7 +35,7 @@ https://knative.dev/docs/eventing/sources/
 | [GitLab](https://github.com/knative/eventing-contrib/blob/master/gitlab/pkg/apis/sources/v1alpha1/gitlabsource_types.go) | 概念验证         | None    | Registers for events of the specified types on the specified GitLab repository. Brings those events into Knative. |
 | [Kubernetes](https://github.com/knative/eventing/blob/master/pkg/apis/sources/v1alpha1/apiserver_types.go) | 积极开发中       | Knative | 将Kubernetes API服务器事件引入Knative。                      |
 | [Ping](https://github.com/knative/eventing/blob/master/pkg/apis/sources/v1alpha2/ping_types.go) | 发展中           | None    | 使用内存中的定时器，按照指定的cron计划产生具有固定有效载荷的事件。 |
-| [VMware](https://github.com/vmware-tanzu/sources-for-knative/tree/{{< branch >}}/pkg/apis/source/v1alpha1/vspheresource_types.go) | 积极开发中       | None    | Brings [vSphere](https://www.vmware.com/products/vsphere.html) events into Knative. |
+| [VMware](https://github.com/vmware-tanzu/sources-for-knative) | 积极开发中       | None    | Brings [vSphere](https://www.vmware.com/products/vsphere.html) events into Knative. |
 
 ## Meta Sources
 
@@ -51,26 +52,26 @@ https://knative.dev/docs/eventing/sources/
 
 ### Source Containers
 
-These are containers intended to be used with `ContainerSource`. See the docs [here](https://knative.dev/docs/eventing/samples/container-source/index.html).
+这些都是打算和ContainerSource一起使用的容器。
 
 | Name                                                         | Status             | Support     | Description                                                  |
 | ------------------------------------------------------------ | ------------------ | ----------- | ------------------------------------------------------------ |
-| [AWS CodeCommit](https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awscodecommitsource/README.md) | Supported          | TriggerMesh | Registers for events of the specified types on the specified AWS CodeCommit repository. Brings those events into Knative. |
-| [AWS Cognito](https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awscognitosource/README.md) | Supported          | TriggerMesh | Registers for AWS Cognito events. Brings those events into Knative. |
-| [AWS DynamoDB](https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awsdynamodbsource/README.md) | Supported          | TriggerMesh | Registers for events of on the specified AWS DynamoDB table. Brings those events into Knative. |
-| [AWS Kinesis](https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awskinesissource/README.md) | Supported          | TriggerMesh | Registers for events on the specified AWS Kinesis stream. Brings those events into Knative. |
-| [AWS SNS](https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssnssource) | Supported          | TriggerMesh | Registers for events of the specified AWS SNS endpoint. Brings those events into Knative. |
-| [AWS SQS](https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssqssource/README.md) | Supported          | TriggerMesh | Registers for events of the specified AWS SQS queue. Brings those events into Knative. |
-| [FTP / SFTP](https://github.com/vaikas-google/ftp)           | Proof of concept   | None        | Watches for files being uploaded into a FTP/SFTP and generates events for those. |
-| [Heartbeat](https://github.com/Harwayne/auto-container-source/tree/master/heartbeat-source) | Proof of Concept   | None        | Uses an in-memory timer to produce events as the specified interval. Uses AutoContainerSource for underlying infrastructure. |
-| [Heartbeats](https://github.com/knative/eventing-contrib/tree/{{< branch >}}/cmd/heartbeats) | Proof of Concept   | None        | Uses an in-memory timer to produce events at the specified interval. |
-| [K8s](https://github.com/Harwayne/auto-container-source/tree/master/k8s-event-source) | Proof of Concept   | None        | Brings Kubernetes cluster events into Knative. Uses AutoContainerSource for underlying infrastructure. |
-| [WebSocket](https://github.com/knative/eventing-contrib/tree/{{< branch >}}/cmd/websocketsource) | Active Development | None        | Opens a WebSocket to the specified source and packages each received message as a Knative event. |
+| [AWS CodeCommit](https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awscodecommitsource/README.md) | Supported          | TriggerMesh | 在指定的AWS CodeCommit仓库中注册指定类型的事件。将这些事件带入Knative。 |
+| [AWS Cognito](https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awscognitosource/README.md) | Supported          | TriggerMesh | 注册AWS Cognito事件。将这些事件带入Knative。                 |
+| [AWS DynamoDB](https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awsdynamodbsource/README.md) | Supported          | TriggerMesh | 注册指定的AWS DynamoDB表上的事件。将这些事件带入Knative。    |
+| [AWS Kinesis](https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awskinesissource/README.md) | Supported          | TriggerMesh | 注册指定AWS Kinesis stream上的事件。将这些事件带入Knative。  |
+| [AWS SNS](https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssnssource) | Supported          | TriggerMesh | 注册指定AWS SNS端点的事件。将这些事件带入Knative。           |
+| [AWS SQS](https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssqssource/README.md) | Supported          | TriggerMesh | 注册指定AWS SQS队列的事件。将这些事件带入Knative。           |
+| [FTP / SFTP](https://github.com/vaikas-google/ftp)           | Proof of concept   | None        | 监视上传到FTP/SFTP的文件，并为这些文件生成事件。             |
+| [Heartbeat](https://github.com/Harwayne/auto-container-source/tree/master/heartbeat-source) | Proof of Concept   | None        | 使用内存中的定时器，以指定的时间间隔产生事件。使用AutoContainerSource作为底层基础设施。 |
+| [Heartbeats](https://github.com/knative/eventing-contrib)    | Proof of Concept   | None        | 使用内存中的定时器以指定的时间间隔产生事件。                 |
+| [K8s](https://github.com/Harwayne/auto-container-source/tree/master/k8s-event-source) | Proof of Concept   | None        | 将Kubernetes集群事件引入Knative。使用AutoContainerSource作为基础设施。 |
+| [WebSocket](https://github.com/knative/eventing-contrib/)    | Active Development | None        | 向指定的源打开WebSocket，并将每个收到的消息打包为Knative事件。 |
 
 ### SinkBindings
 
-These are containers intended to be used with `SinkBinding`. See the docs [here](https://knative.dev/docs/eventing/samples/sinkbinding/index.html).
+这些都是打算与SinkBinding一起使用的容器。
 
 | Name                                       | Status             | Support | Description                                                  |
 | ------------------------------------------ | ------------------ | ------- | ------------------------------------------------------------ |
-| [Konnek](https://konnek.github.io/docs/#/) | Active Development | None    | Retrieves events from cloud platforms (like AWS and GCP) and transforms them into CloudEvents for consumption in Knative. |
+| [Konnek](https://konnek.github.io/docs/#/) | Active Development | None    | 从云平台（如AWS和GCP）检索事件，并将其转化为CloudEvents在Knative中消费。|
