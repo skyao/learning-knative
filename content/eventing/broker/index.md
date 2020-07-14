@@ -119,7 +119,7 @@ Trigger 代表了从特定的Broker订阅事件的愿望。
 
 一个简单的例子，它将从给定的（default）broker那里接收所有的事件，并将它们传递给Knative服务my-service。
 
-```shell
+```yaml
 kubectl create -f - <<EOF
 apiVersion: eventing.knative.dev/v1
 kind: Trigger
@@ -135,11 +135,27 @@ spec:
 EOF
 ```
 
+### 使用Ping source发送事件
 
+Knative Eventing自带了一个Ping Source，它可以按照配置好的时间表发射事件。为此，我们将把它配置为每分钟发送一次事件，说，是的，你猜对了，Hello World！。
 
-
-
-
+```shell
+kubectl create -f - <<EOF
+apiVersion: sources.knative.dev/v1alpha2
+kind: PingSource
+metadata:
+  name: test-ping-source
+spec:
+  schedule: "*/1 * * * *"
+  jsonData: '{"message": "Hello world!"}'
+  sink:
+    ref:
+      # Deliver events to Broker.
+      apiVersion: eventing.knative.dev/v1
+      kind: Broker
+      name: default
+EOF
+```
 
 
 
