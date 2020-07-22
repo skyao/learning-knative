@@ -65,46 +65,6 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 100
 
 [[menu.main]]
-	name   = "Build模块"
-	identifier = "build"
-	url    = "/build/"
-	weight = 200
-
-[[menu.main]]
-	name   = "Serving模块"
-	identifier = "serving"
-	url    = "/serving/"
-	weight = 300
-
-[[menu.main]]
-	name   = "Serving概述"
-	identifier = "serving-overview"
-	parent = "serving"
-	url    = "/serving/overview/"
-	weight = 310
-
-[[menu.main]]
-	name   = "Serving API"
-	identifier = "serving-api"
-	parent = "serving"
-	url    = "/serving/api/"
-	weight = 320
-
-[[menu.main]]
-	name   = "Serving Scaling"
-	identifier = "serving-scaling"
-	parent = "serving"
-	url    = "/serving/scaling/"
-	weight = 330
-
-[[menu.main]]
-	name   = "Runtime Contract"
-	identifier = "runtime-contract"
-	parent = "serving"
-	url    = "/serving/runtime-contract/"
-	weight = 350
-
-[[menu.main]]
 	name   = "Eventing模块"
 	identifier = "eventing"
 	url    = "/eventing/"
@@ -130,6 +90,13 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	parent = "eventing"
 	url    = "/eventing/broker/"
 	weight = 440
+
+[[menu.main]]
+	name   = "Channel"
+	identifier = "eventing-channel"
+	parent = "eventing"
+	url    = "/eventing/channel/"
+	weight = 460
 
 [blackfriday]
 	smartypants	= true
